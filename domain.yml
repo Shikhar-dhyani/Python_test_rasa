@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - query
+  - ask_help
+  - bot_details
+  - company_overview
+
+
+influence_conversation: false
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+  - text: "Good Bye! Have a nice day ahead"
+
+  utter_help:
+  - text: "I can help you with your analysis help. You can ask me about product details, product overview, or ask for any other help."
+
+  utter_bot_details:
+  - text: "Hi, i am Sara your personal chatbot designed to help in your analysis made by ClicFlyer. If you want to know more about company you can ask me, i would try to give you a brief introduction."
+
+  utter_company:
+  - text: "Hi, We are ClicFlyer -- a retail analytics company, empowering Retailers & Brands with Business Intelligence data & analytics insights."
+
+
+actions:
+  - action_query_fastapi_app
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
